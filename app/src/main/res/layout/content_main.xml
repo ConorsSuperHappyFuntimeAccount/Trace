@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="#474747">
+
+<TextView
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/TitleLabel"
+        android:fontFamily="sans-serif-thin"
+        android:id="@+id/textView"
+        android:textColor="#8080ff"
+        android:textStyle="normal"
+        android:textSize="90dp"
+        android:focusableInTouchMode="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button1label"
+        android:textColor="#8080ff"
+        android:id="@+id/trace"
+        android:background="@drawable/mybutton"
+        android:layout_marginTop="74dp"
+        android:textSize="19dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:onClick="launchGradedTrace" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button2label"
+        android:id="@+id/freeDraw"
+        android:textColor="#8080ff"
+        android:background="@drawable/mybutton"
+        android:layout_below="@+id/trace"
+        android:layout_marginTop="44dp"
+        android:layout_alignLeft="@+id/trace"
+        android:layout_alignStart="@+id/trace"
+        android:layout_alignRight="@+id/trace"
+        android:layout_alignEnd="@+id/trace"
+        android:textSize="19dp"
+        android:onClick="launchFreeMode" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button3label"
+        android:id="@+id/settings"
+        android:background="@drawable/mybutton"
+        android:textColor="#8080ff"
+        android:layout_below="@+id/freeDraw"
+        android:layout_marginTop="44dp"
+        android:layout_alignLeft="@+id/freeDraw"
+        android:layout_alignStart="@+id/freeDraw"
+        android:layout_alignRight="@+id/freeDraw"
+        android:layout_alignEnd="@+id/freeDraw"
+        android:textSize="19dp"
+        android:onClick="launchSettings" />
+
+</RelativeLayout>
+<!--#8080ff-->
+
