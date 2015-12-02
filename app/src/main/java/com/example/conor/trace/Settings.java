@@ -13,13 +13,9 @@ public class Settings extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        System.out.println("1");
         super.onCreate(savedInstanceState);
-        System.out.println("2");
         Intent intent = getIntent();
-        System.out.println("3");
         setContentView(R.layout.activity_settings);
-
 
     }
 }

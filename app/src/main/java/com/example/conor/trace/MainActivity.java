@@ -24,9 +24,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void launchSettings(View view) {
-        System.out.println("1");
         Intent intent2 = new Intent(this, Settings.class);
-        System.out.println("2");
         startActivity(intent2);
     }
 

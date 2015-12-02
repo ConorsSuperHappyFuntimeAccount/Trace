@@ -10,4 +10,11 @@
     android:background="#474747"
     tools:context=".Settings">
 
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expandableListView"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="#ffffff" />
 </LinearLayout>
