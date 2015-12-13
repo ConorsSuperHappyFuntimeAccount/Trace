@@ -18,12 +18,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     /** Called when the user clicks the Free Draw button button */
-    public void launchFreeMode(View view) {
+    public void launchFreeMode(View view)
+    {
         Intent intent = new Intent(this, TraceFunction.class);
         startActivity(intent);
     }
 
-    public void launchSettings(View view) {
+    public void launchSettings(View view)
+    {
         Intent intent2 = new Intent(this, Settings.class);
         startActivity(intent2);
     }

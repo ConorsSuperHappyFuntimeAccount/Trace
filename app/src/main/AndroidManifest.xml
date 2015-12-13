@@ -3,17 +3,20 @@
     package="com.example.conor.trace" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:screenOrientation="portrait"
-        android:theme="@style/AppTheme.NoActionBar" >
+        android:theme="@style/AppTheme.NoActionBar"
+        android:name="Store">
         <activity
-            android:screenOrientation="portrait"
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +24,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:label="@string/app_name" android:name=".TraceFunction"/>
-        <activity android:label="GradedTrace" android:name=".GradedTrace"/>
-        <activity android:label="Settings" android:name=".Settings"/>
+        <activity
+            android:name=".TraceFunction"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GradedTrace"
+            android:label="GradedTrace"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUs"
+            android:label="aboutus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutTrace"
+            android:label="aboutTrace"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:label="login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Help"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".PostActivity" >
+        </activity>
+        <activity android:name=".SigninActivity" >
+        </activity>
+        <activity android:name=".Store" >
+        </activity>
     </application>
 
 </manifest>

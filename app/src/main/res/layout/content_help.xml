@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:autoLink="web"
+
+        android:id="@+id/button_so"
+        android:text="Launch Help Website"
+        android:linksClickable="true"
+        android:onClick="goToSo"
+        android:background="@drawable/mybutton"
+
+        android:textSize="19sp"
+        android:layout_gravity="bottom"
+        android:textColor="#000000"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="We at Trace want to make sure you're getting the best possible experience using our app. If you have any problems then feel free to visit our website linked below. Here you can submit queries or errors and we'll fix problems as they arise. Otherwise there's also a lot of content for you to research about how MND affects people, and exercises those with the condition can do to help themselves"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#000000" />
+</RelativeLayout>

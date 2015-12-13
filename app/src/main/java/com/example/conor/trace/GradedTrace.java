@@ -9,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import java.util.UUID;
@@ -19,15 +18,15 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-import java.util.UUID;
 import android.content.Intent;
+
 /**
  * Created by conor on 29/11/2015.
  */
 public class GradedTrace extends AppCompatActivity implements View.OnClickListener
 {
     private DrawingView drawView;
-    private ImageButton currPaint,submitBtn,newBtn,saveBtn;
+    private ImageButton currPaint,newBtn,submitBtn,saveBtn;
     private float  mediumBrush;
 
     @Override
@@ -46,11 +45,11 @@ public class GradedTrace extends AppCompatActivity implements View.OnClickListen
 
         drawView.setBrushSize(mediumBrush);
 
-        //submitBtn = (ImageButton)findViewById(R.id.submit_btn);
-        //submitBtn.setOnClickListener(this);
-
         newBtn = (ImageButton)findViewById(R.id.new_btn);
         newBtn.setOnClickListener(this);
+
+        submitBtn = (ImageButton)findViewById(R.id.submit_btn);
+        submitBtn.setOnClickListener(this);
 
         saveBtn = (ImageButton)findViewById(R.id.save_btn);
         saveBtn.setOnClickListener(this);
@@ -82,19 +81,67 @@ public class GradedTrace extends AppCompatActivity implements View.OnClickListen
         return super.onOptionsItemSelected(item);
     }
 
+    public void paintClicked(View view)
+    {
+        drawView.setErase(false);
+        drawView.setBrushSize(drawView.getLastBrushSize());
+        //use chosen color
+        if(view!=currPaint)
+        {
+            //update color
+            ImageButton imgView = (ImageButton) view;
+            String color = view.getTag().toString();
+            drawView.setColor(color);
+            imgView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.paint_pressed, null));
+            currPaint.setImageDrawable(ResourcesCompat.getDrawable(getResources(),R.drawable.paint,null));
+            currPaint=(ImageButton)view;
+        }
 
+    }
 
     @Override
     public void onClick(View view)
     {
         //respond to clicks
-        //if(view.getId()==R.id.submit_btn)
-        //{
-            //switch to erase - choose size
+        if(view.getId()==R.id.submit_btn)
+        {
+            //submit the current image to the server
+            AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+            saveDialog.setTitle("Submit Drawing");
+            saveDialog.setMessage("Are you sure you want to submit the current drawing?");
+            saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    //Save file
+                    drawView.setDrawingCacheEnabled(true);
+                    String imgSaved = MediaStore.Images.Media.insertImage(
+                            getContentResolver(), drawView.getDrawingCache(),
+                            ".bmp", "drawing");//was .png, but used .bmp for later purposes
 
-        //}
+                    if (imgSaved != null)
+                    {
+                        //double result = compareImg();
+                        Toast savedToast = Toast.makeText(getApplicationContext(),
+                                "Drawing has been submitted,check your device's gallery",
+                                Toast.LENGTH_SHORT);
+                        savedToast.show();
+                    } else {
+                        Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                                "Sorry, your drawing couldn't be submitted", Toast.LENGTH_SHORT);
+                        unsavedToast.show();
+                    }
+                    drawView.destroyDrawingCache();
+                }
+            });
+            saveDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which)
+                {
+                    dialog.cancel();
+                }
+            });
+            saveDialog.show();
+        }
 
-         if(view.getId()==R.id.new_btn)
+        else if(view.getId()==R.id.new_btn)
         {
             //new button
             AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
@@ -158,4 +205,12 @@ public class GradedTrace extends AppCompatActivity implements View.OnClickListen
 
     }
     //new methods go here
+    //public double compareImg() throws IOException {
+        //URL url1 = new URL("http://rosettacode.org/mw/images/3/3c/Lenna50.jpg");
+        //URL url2 = new URL("http://rosettacode.org/mw/images/b/b6/Lenna100.jpg");
+        //img1 = ImageIO.read(url1);
+        //img2 = ImageIO.read(url2);
+
+      //  System.out.println("diff percent: " + ( 100.0));
+    //}
 }

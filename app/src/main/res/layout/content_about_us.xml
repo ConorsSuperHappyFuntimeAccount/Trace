@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000033"
+    tools:context=".AboutUs">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:text="We are a group of students that have developed an assistive mobile application and website to help people with motor neuron disease(MND). We pride ourselves in using an agile workflow and dedicated members to bring our users the best experience, and help us develop the app to new heights. If you have any questions or need assistance, please contact us at trace@tracer.com .Thank You!"
+        android:editable="false" />
+
+    <EditText
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Conor Kiernan"
+        android:ems="10"
+        android:textSize="15dp"
+        android:id="@+id/editText2"
+        android:textColor="#c9cc00"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Kunal Tyagi"
+        android:ems="10"
+        android:textSize="15dp"
+        android:textColor="#c9cc00"
+        android:id="@+id/editText3"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Omar Anshasi"
+        android:ems="10"
+        android:textSize="15dp"
+        android:id="@+id/editText4"
+        android:textColor="#c9cc00"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Donal Harrington"
+        android:ems="10"
+        android:textSize="15dp"
+        android:textColor="#c9cc00"
+        android:id="@+id/editText5"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Hamza Zahoor"
+        android:ems="10"
+        android:textSize="15dp"
+        android:textColor="#c9cc00"
+        android:id="@+id/editText6"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Trace Team:"
+        android:textColor="#1AFF00"
+        android:id="@+id/textView"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+</ScrollView>

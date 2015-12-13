@@ -11,8 +11,9 @@
     <string name="med">Medium</string>
     <string name="lrg">Large</string>
     <string name="title_FreeMode_message">Launched free mode</string>
-    <string name ="TitleLabel">Trace</string>
+    <string name ="TitleLabel">TRACE</string>
     <string name ="button1label">Trace Now!</string>
     <string name ="button2label">Free Draw</string>
     <string name ="button3label">Settings</string>
+    <string name="title_activity_about_us">AboutUs</string>
 </resources>

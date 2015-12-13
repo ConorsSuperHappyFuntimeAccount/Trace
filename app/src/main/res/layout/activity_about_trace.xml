@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#000033"
+    tools:context=".AbouTrace">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#000033"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp"
+            android:fontFamily="serif"
+            android:lineSpacingExtra="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:text="Trace is a mobile app designed to improve interactions and understanding between patients who have MND and doctors. Most types of MND (fine motor neuron disease) have starting symptoms in the hand, causing the hand to twitch, be stiff, have muscle cramps, and have discomfort in the hand, making basically everyday life very difficult. We know that MND is also common with kids, so that is why we have designed the app a little more kid friendly.\nThe mobile application features daily exercises which can be prescribed by the patient’s doctor from our website. Tracer.ga allows the doctor to monitor the patient based of the results that are uploaded to the database and assign them new exercises, and the website allows patients to check their stats (e.g scores posted), tasks assigned, receive email where password must be reset in order to log in.\nExercises come in the form of a shape-drawing comparison game that helps patients control the disease and try to make the process easier. These exercises can ask the patient to trace shapes for now but we plan to add more variety in the future for our users."
+            android:editable="false" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
